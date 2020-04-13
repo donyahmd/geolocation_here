@@ -87,5 +87,6 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     @stack('script')
+    <script src="{{ asset('js/here.js') }}"></script>
 </body>
 </html>
