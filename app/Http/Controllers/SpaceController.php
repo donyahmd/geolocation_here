@@ -78,7 +78,11 @@ class SpaceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $space = Space::findOrFail($id);
+        if ($space->user_id != request()->user()->id) {
+            return redirect()->back();
+        }
+        return view('pages.space.edit', compact('space'));
     }
 
     /**
